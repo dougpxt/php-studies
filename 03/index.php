@@ -32,4 +32,7 @@ $alunos["Maria"] = 21;
 $alunos["Ana"] = 21;
 print_r($alunos);
 
+$frutas[] = 'abacaxi';
+$numeros[] = 93;
+$alunos['José'] = 25;
 ?>
