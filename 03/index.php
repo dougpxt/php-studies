@@ -35,4 +35,12 @@ print_r($alunos);
 $frutas[] = 'abacaxi';
 $numeros[] = 93;
 $alunos['José'] = 25;
+
+echo '<hr>';
+echo '<br>';
+
+echo 'lista de frutas: <br>';
+foreach($frutas as $fruta) {
+    echo $fruta . " ";
+}
 ?>
