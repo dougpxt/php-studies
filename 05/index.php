@@ -29,4 +29,10 @@ while($numero >= 0){
     }
 }
 // 
+echo "Contagem Regressiva <br><HR>";
+
+$numeroAtual = 2;
+for ($numero = 1; $numero<=10; $numero++){
+    echo "$numeroAtual * $numero = " . ($numeroAtual*$numero) . "<br>";
+}
 ?>
