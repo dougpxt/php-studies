@@ -173,7 +173,7 @@ for($i = 1; $i <= $altura_piramide; $i++){
     for($j = 1; $j <= $i; $j++){
         echo "*";
     }
-    echo "<br>"
+    echo "<br>";
 }
 
 //// Atividade 8: Contagem de Dígitos em um Número
