@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Contato por ID</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Buscar Contatos por ID</h1>
+
+    <input type="text" id="contactId" placeholder="Digite o ID do contato">
+    <button onclick="searchContact()">BUSCAR</button>
+    <div id="contactDetails"></div>
+
+    <script>
+        function searchContact(){
+            const contactId = document.getElementById('contactId').value;
+
+            fetch(`api.php?action=get&id=${contactId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('contactDetails').innerText = data.error ? data.error : 'NAO ENCONTRADO' 
+                } else{
+                    document.getElementById('contactDetails').innerText = `
+                        <h2>Detalhes do Contato</h2>
+                        <p>ID: ${data.id} </p>
+                        <p>Nome: ${data.nome} </p>
+                        <p>Telefone: ${data.telefone}</p>
+                        <p>Email: ${data.email}</p>
+                    `;
+                }
+            } )
+        }
+    </script>
+</body>
+</html>
